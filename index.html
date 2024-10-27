@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UDP Flood Attack - Wiki</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Enlace al archivo CSS -->
+    <script src="script.js" defer></script> <!-- Enlace al archivo JavaScript -->
+</head>
+<body>
+
+    <header>
+        <h1>UDP Flood Attack</h1>
+        <h2>Grupo 5</h2>
+    </header>
+
+    <div class="container">
+        <nav class="sidebar">
+            <h2>Menú</h2>
+            <ul>
+                <li><a href="#consiste">¿En qué consiste?</a></li>
+                <li><a href="#caracteristicas">Características</a></li>
+                <li><a href="#escenarios">Escenarios</a></li>
+                <li><a href="#controles">Controles proactivos</a></li>
+                <li><a href="#contrarrestar">Cómo se contrarrestan</a></li>
+                <li><a href="#bibliografia">Bibliografía</a></li>
+                <li><a href="#pregunta">Pregunta para el parcial</a></li>
+            </ul>
+        </nav>
+
+        <main class="content">
+            <h2 id="consiste">¿En qué consiste?</h2>
+            <p>
+                Un ataque de inundación UDP es un tipo de ataque de denegación de servicio (DoS) que consiste en enviar un gran número de paquetes UDP a un objetivo específico, con el fin de saturar su ancho de banda o sobrecargar sus recursos, haciendo que el servicio se vuelva inaccesible.
+            </p>
+
+            <h2 id="caracteristicas">Características</h2>
+            <ul>
+                <li>Utiliza el Protocolo de Datagramas de Usuario (UDP).</li>
+                <li>Genera tráfico masivo sin necesidad de establecer una conexión previa.</li>
+                <li>Puede hacer uso de direcciones IP falsificadas para ocultar la identidad del atacante.</li>
+                <li>Puede provocar respuestas ICMP "Destination Unreachable" al enviar paquetes a puertos cerrados.</li>
+            </ul>
+
+            <h2 id="escenarios">Escenarios</h2>
+            <p>
+                Un ataque de UDP flood puede ocurrir en entornos donde los servidores son accesibles a través de internet, especialmente aquellos que dependen de UDP, como servidores de juegos, VoIP, y servicios de streaming.
+            </p>
+
+            <h2 id="controles">Controles proactivos</h2>
+            <ul>
+                <li>Implementar firewalls que filtren el tráfico UDP.</li>
+                <li>Configurar sistemas de detección y prevención de intrusiones (IDS/IPS).</li>
+                <li>Monitorear el tráfico de red en busca de patrones inusuales.</li>
+                <li>Limitar la tasa de tráfico UDP permitido en la red.</li>
+            </ul>
+
+            <h2 id="contrarrestar">Cómo se contrarrestan</h2>
+            <p>
+                Para contrarrestar un ataque de inundación UDP, se pueden implementar soluciones como la segmentación de redes, el uso de tecnologías de mitigación de DDoS, y el análisis de tráfico en tiempo real para identificar y bloquear las fuentes del ataque.
+            </p>
+
+            <h2 id="bibliografia">Bibliografía</h2>
+            <ul>
+                <li>Stallings, W. (2016). "Computer Networking with Internet Protocols and Technology". Pearson.</li>
+                <li>West, J. (2020). "Network Security Essentials: Applications and Standards". Pearson.</li>
+                <li>Wikipedia. (2023). "Denial-of-service attack". <a href="https://es.wikipedia.org/wiki/Denial-of-service_attack" target="_blank">Enlace</a></li>
+            </ul>
+
+            <h2 id="pregunta">Pregunta para el parcial</h2>
+            <p><strong>¿Cuál es el propósito principal de un ataque de inundación UDP?</strong></p>
+            <ul>
+                <li><input type="radio" name="respuesta" value="A"> A. Robar datos confidenciales</li>
+                <li><input type="radio" name="respuesta" value="B"> B. Saturar recursos y causar denegación de servicio <strong>(Respuesta correcta)</strong></li>
+                <li><input type="radio" name="respuesta" value="C"> C. Mejorar la seguridad de la red</li>
+                <li><input type="radio" name="respuesta" value="D"> D. Aumentar el rendimiento de la red</li>
+            </ul>
+            <button onclick="validarRespuesta()">Enviar Respuesta</button>
+            <p id="resultado"></p>
+        </main>
+    </div>
+
+    <footer>
+        <p>Autores: Oscar Iván Peñate y Brian Steven Rodríguez - Grupo 5</p>
+    </footer>
+
+</body>
+</html>
